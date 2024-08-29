@@ -1,5 +1,4 @@
-## Module 14 Belly Button Challenge
-# Java Script Challenge
+# Module 14 Belly Button Challenge / Java Script Challenge
 
 
 Background
