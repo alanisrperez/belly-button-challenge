@@ -1,4 +1,4 @@
-# Module 14 Belly Button Challenge / Java Script Challenge
+# Module 14 Belly Button Challenge / Java Script + HTML
 
 
 Background
@@ -30,11 +30,11 @@ Instructions
 - Loop through each key-value pair from the metadata JSON object and create a text string.
 - Append an html tag with that text to the #sample-metadata panel.
 
-INSERT DEMO IMAGE HERE
+![Demo_Box](https://github.com/alanisrperez/belly-button-challenge/blob/main/images/Demo_Box.png)
 
 5. Update all the plots when a new sample is selected. Additionally, you are welcome to create any layout that you would like for your dashboard. An example dashboard is shown as follows:
 
-INSERT DASHBOARD IMAGE HERE
+![Dashboard](https://github.com/alanisrperez/belly-button-challenge/blob/main/images/Dashboard.png)
 
 
 References
