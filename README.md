@@ -15,7 +15,7 @@ Instructions
 - Use otu_ids as the labels for the bar chart.
 - Use otu_labels as the hovertext for the chart.
 
-INSERT H BAR IMAGE HERE
+![HBar_Chart](https://github.com/alanisrperez/belly-button-challenge/blob/main/images/HBar_Chart.png)
 
 3. Create a bubble chart that displays each sample.
 - Use otu_ids for the x values.
@@ -24,7 +24,7 @@ INSERT H BAR IMAGE HERE
 - Use otu_ids for the marker colors.
 - Use otu_labels for the text values.
 
-INSERT BUBBLE CHART IMAGE HERE
+![Bubble_Chart](https://github.com/alanisrperez/belly-button-challenge/blob/main/images/Bubble_Chart.png)
 
 4. Display the sample's metadata, i.e., an individual's demographic information.
 - Loop through each key-value pair from the metadata JSON object and create a text string.
