@@ -1,27 +1,24 @@
 // Build the metadata panel
-  function buildMetadata(sample) {
-    d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
-  
-      // Get the metadata field
-      let metadata = data.metadata;
-  
-      // Filter the metadata for the object with the desired sample number
-      let filteredMetaData = metadata.find(obj => obj.id === sample);
-      if (filteredMetaData) {
-        // Use d3 to select the panel with id of `#sample-metadata`
-        let panelMetaData = d3.select("#sample-metadata");
-        // Use `.html("") to clear any existing metadata
-        panelMetaData.html("");
-  
-        // Inside a loop, you will need to use d3 to append new
-        // tags for each key-value in the filtered metadata.
-        Object.entries(filteredMetaData).forEach(([key, value]) => {
-          panelMetaData.append("p").text(`${key}: ${value}`);
-        });
-      } else {
-        console.log("Metadata not found for sample:", sample);
-      }
+function buildMetadata(sample) {
+  d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
+
+     // Get the metadata field
+     let metadata = data.metadata;
+
+     // Filter the metadata for the object with the desired sample number
+     let filteredMetadata = metadata.find(obj => obj.id == sample);
+ 
+     // Use d3 to select the panel with id of `#sample-metadata`
+     let metadataPanel = d3.select("#sample-metadata");
+ 
+     // Clear any existing metadata
+     metadataPanel.html("");
+ 
+     // Loop through each key-value pair in the filtered metadata and append new tags
+     Object.entries(filteredMetadata).forEach(([key, value]) => {
+      metadataPanel.append("p").text(`${key}: ${value}`);
     });
+   });
   }
 
 // function to build both charts
@@ -61,11 +58,9 @@ function buildCharts(sample) {
         title: 'Number of Bacteria'
       }
     };
-    
-    Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
     // Render the Bubble Chart
-    Plotly.newPlot('bubble', bubbleData);
+    Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
     // For the Bar Chart, map the otu_ids to a list of strings for your yticks
     let yticks = otuIDs.slice(0,10).map(otuID => `OTU ${otuID}`).reverse();
